@@ -1,16 +1,12 @@
 
+const numeroKm = parseInt(prompt('inserisci numero km che vuoi percorrere'));
 
-const numeroKm = parseInt prompt ('inserisci numero km che vuoi percorrere');
 
 if (isNaN (numeroKm)) {
-    alert('valore inserito non valido');
+    alert('valore inserito non valido!');
 } else {
-    alert('il valore inserito è: ' + numero km );
+    alert('il valore inserito è: ' + numeroKm );
 }
-
-
-
-
 
 
 
