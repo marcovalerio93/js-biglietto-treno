@@ -1,12 +1,19 @@
 
 const numeroKm = parseInt(prompt('inserisci numero km che vuoi percorrere'));
+const eta = parseInt(prompt('inserisci latua età'));
 
-
-if (isNaN (numeroKm)) {
+if (isNaN (numeroKm) || isNaN(eta)) {
     alert('valore inserito non valido!');
 } else {
     alert('il valore inserito è: ' + numeroKm );
+
+
+
+
+    
 }
+
+
 
 
 
