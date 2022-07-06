@@ -1,16 +1,40 @@
 
-const numeroKm = parseInt(prompt('inserisci numero km che vuoi percorrere'));
-const eta = parseInt(prompt('inserisci latua età'));
+const numeroKm = parseInt(prompt('Inserisci numero km che vuoi percorrere'));
+const eta = parseInt(prompt('Inserisci latua età'));
+const costoKm = 0.21;
 
 if (isNaN (numeroKm) || isNaN(eta)) {
-    alert('valore inserito non valido!');
+    alert('Valore inserito non valido!');
 } else {
-    alert('il valore inserito è: ' + numeroKm );
+    alert('Il valore inserito è: ' + numeroKm );
+
+    let prezzo = costoKm * numeroKm;
+    let messaggio = '';
+
+    if (eta < 18) {
+
+        const sconto = prezzo * 0.2;
+
+        prezzo = prezzo - sconto;
+
+        messaggio = ' 20% di sconto young! prezzo ' + prezzo.toFixed(2) + '€';
+
+    } else if (eta > 65) {
+
+        const sconto = prezzo * 0.4;
+
+        prezzo = prezzo - sconto;
+
+        messaggio = ' 40% di sconto senior! prezzo ' + prezzo.toFixed(2) + '€';
 
 
+    } else {
+        messaggio = ' Il di prezzo del biglietto è ' + prezzo.toFixed(2)+ '€';
+    }
+
+    alert(messaggio);
 
 
-    
 }
 
 
